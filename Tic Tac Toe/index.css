@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    background: url(imgs/background.png);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 3px darkmagenta;
+    position: relative;
+}
+
+h1::before {
+    content: "TICTACTOE";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hiden;
+    color: darkmagenta;
+    border-right:8px solid darkmagenta;
+    transition: 1s ease-in-out;
+}
+
+h1:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px darkmagenta);
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(80 px);
+    backdrop-filter: blur(80 px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20%;;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+    text-emphasis-color: orange;
+}
+
+.cell:hover {
+    box-shadow: 0 0 5px rgb(49, 121, 8), 0 0  25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+    filter: blur(5px);
+}
+
+.scoreboard {
+    margin: 20px 0;
+}
+
+.edit-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-icon:hover {
+    filter: blur(5px)
+}
+
+#player1-name {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#player2-name {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#draw {
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #3eff37;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+}
+
+#restartButton:hover {
+    box-shadow: 0 0 5px #3eff37, 0 0  25px #3eff37, 0 0 50px #3eff37, 0 0 100px #3eff37, 0 0 200px #3eff37;
+}
+
+#saveNameButton {
+    box-shadow: 0 0 5px #3eff37, 0 0  25px #3eff37, 0 0 50px #3eff37, 0 0 100px #3eff37, 0 0 200px #3eff37;
+}
+
+#cancelNameButton {
+    box-shadow: 0 0 5px #3eff37, 0 0  25px #3eff37, 0 0 50px #3eff37, 0 0 100px #3eff37, 0 0 200px #3eff37;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#winMessage {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3eff37;
+    text-shadow: 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
+
+.name-input-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.name-input-container input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#nameInput:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(2 px);
+    backdrop-filter: blur(2 px);
+}
+
+.name-input-container button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#turnMessage {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
+
+@media(max-width: 700px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(imgs/700.png);
+    }
+}
