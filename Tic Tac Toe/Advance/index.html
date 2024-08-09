@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TICTACTOE</h1>
+        <div class="scoreboard">
+            <div>
+                <img src="imgs/pencil.png" alt="Edit" class="edit-icon" id="edit-player1">
+                <span id="player1-name">Player 1  -</span>
+                Wins: <span id="player1-wins">0</span>
+            </div>
+            <div>
+                <img src="imgs/pencil.png" alt="Edit" class="edit-icon" id="edit-player2">
+                <span id="player2-name">Player 2  -</span>
+                Wins: <span id="player2-wins">0</span>
+            </div>
+            <div>-----------------------------</div>
+            <div id="draw">Draws: <span id="draws">0</span></div>
+        </div>
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div id="winMessage" class="message"></div>
+        <button id="restartButton">Play Again</button>
+        <div id="turnMessage" class="message"></div>
+        <div id="nameInputContainer" class="name-input-container">
+            <input type="text" id="nameInput" placeholder="Enter name">
+            <button id="saveNameButton">Save</button>
+            <button id="cancelNameButton">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
