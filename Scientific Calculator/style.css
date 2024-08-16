@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.header {
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #FFC0CB, #d2001a, #7462ff,#f48e21,#23d5ab, #8A2BE2, #8A2BE2);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+table {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+input[type="button"] {
+    width: 100%;
+    padding: 20px 40px;
+    background: blur(10px);
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+ 
+input[type="text"] {
+    padding: 20px 240px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: right;
+}
+ 
+.display {
+    text-align: right;
+}
